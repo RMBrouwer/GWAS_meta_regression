@@ -6,7 +6,13 @@ This repository contains the script that was used to perform a genome-wide assoc
 - A summary file (see below for an example) that contains the necessary information per cohort.
 
 ## Step 1: align SNPs and store per cohort, per chromosome. 
-Since one probably also wants to run a standard meta-analysis on the data, we will make use of METAL<sup>1</sup> - a program for meta-analysis that performs alignment - using the VERBOSE option to write all the aligned SNPs to a temporary file. See https://genome.sph.umich.edu/wiki/METAL_Documentation for documentation. Run separate_chr.do on the tempfile that contains the verbose output of METAL. If you rerun the analysis (e.g. adding more cohorts) you should also rerun this alignment. Separating the chromosomes is done to limit the number of SNPs that need to be kept in memory in subsequent steps. 
+Since one probably also wants to run a standard meta-analysis on the data, we will make use of METAL<sup>1</sup> - a program for meta-analysis that performs alignment - using the VERBOSE option to write all the aligned SNPs to a temporary file. See https://genome.sph.umich.edu/wiki/METAL_Documentation for documentation. Separating the chromosomes is done in this step to limit the number of SNPs that need to be kept in memory in subsequent steps. Input for this script are tempfile that contains the verbose output of METAL, and a textfile containing a list of the cohorts that went into that analysis. If you rerun the analysis (e.g. adding more cohorts) you should also rerun this alignment and separation of the chromosomes.
+
+
+Call:
+```
+./separate_chr.do TRAIT Cohortlist.txt METAL_verbose_tempfile
+```
 
 After running this step, directory structure should be like this:
 
