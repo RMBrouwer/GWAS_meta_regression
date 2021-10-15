@@ -3,7 +3,7 @@ library(foreach)
 library(metafor)
 library(iterators)
 
-#s("~/Documents/Meta_regression")
+#setwd("~/Documents/Meta_regression")
 
 cmdargs = commandArgs(trailingOnly=TRUE)
 
