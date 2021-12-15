@@ -1,5 +1,5 @@
 # GWAS_meta_regression
-This repository contains the script that was used to perform a genome-wide associaton meta-regression as was used in https://www.biorxiv.org/content/10.1101/2020.04.24.031138v1. Please make sure that there are enough cohorts in the study to make a regression feasible. 
+This repository contains the script that was used to perform a genome-wide associaton meta-regression as was used in https://www.biorxiv.org/content/10.1101/2020.04.24.031138v2. Please make sure that there are enough cohorts in the study to make a regression feasible. 
 
 ## Prerequisites
 - Cohort specific summary statistics for the phenotype that are ready for meta-analysis (QCed and filtered). 
